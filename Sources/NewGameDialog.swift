@@ -10,30 +10,34 @@ class NewGameDialog: UI_NewGameDialog {
         }
     }
 
-    func checkNewMode(_ newMode: String) {
+    func checkNewMode(_ newMode: Int32) {
         switch newMode {
-        case "Beginner":
+        // Beginner.
+        case 0:
             self.spinBoxRows.enabled = false
             self.spinBoxRows.value = 9
             self.spinBoxColumns.enabled = false
             self.spinBoxColumns.value = 9
             self.spinBoxMines.enabled = false
             self.spinBoxMines.value = 10
-        case "Intermediate":
+        // Intermediate.
+        case 1:
             self.spinBoxRows.enabled = false
             self.spinBoxRows.value = 16
             self.spinBoxColumns.enabled = false
             self.spinBoxColumns.value = 16
             self.spinBoxMines.enabled = false
             self.spinBoxMines.value = 40
-        case "Expert":
+        // Expert.
+        case 2:
             self.spinBoxRows.enabled = false
             self.spinBoxRows.value = 30
             self.spinBoxColumns.enabled = false
             self.spinBoxColumns.value = 16
             self.spinBoxMines.enabled = false
             self.spinBoxMines.value = 99
-        case "Custom":
+        // Custom.
+        case 4:
             self.spinBoxRows.enabled = true
             self.spinBoxColumns.enabled = true
             self.spinBoxMines.enabled = true

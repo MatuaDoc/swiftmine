@@ -5,13 +5,7 @@ import Qlift
 srand(UInt32(time(nil)))
 #endif
 
-
-func main() -> Int32 {
-    let application = QApplication()
-    let mainWindow = MainWindow()
-    mainWindow.show()
-    return application.exec()
-}
-
-exit(main())
-
+let application = QApplication()
+let mainWindow = MainWindow()
+mainWindow.show()
+_ = application.exec()

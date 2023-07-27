@@ -15,9 +15,6 @@ class MainWindow: UI_MainWindow {
         self.actionExit.connectTriggered { _ in
             _ = self.close()
         }
-        let desktopRect = QApplication.desktop.availableGeometry(for: self)
-        let center = desktopRect.center
-        self.move(to: QPoint(x: center.x - self.width / 2, y: center.y - self.height / 2))
     }
 
     func showNewGameDialog() {
